@@ -1,0 +1,21 @@
+var express = require('express');
+var router = express();
+var path = require("path");
+var bodyParser =require("body-parser");
+router.use(bodyParser.urlencoded({extend: true}));
+/* GET home page. */
+
+
+  router.get('/credits',function(req,res){
+  res.sendFile(path.join(__dirname+'/credits.html'));
+  //__dirname : It will resolve to your project folder.
+  
+  });
+	//router.use(express.static('/images')
+ 
+ router.get('/quizzes', (req,res) => {
+
+ });
+//router.listen(3001);
+//, () => console.log("Escuchando puerto 3000"));
+module.exports = router;
